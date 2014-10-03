@@ -57,9 +57,9 @@ router.post('/post', requireAuth, function(req, res){
 /**
  * Update a blog Post
  */
-router.post('/post/:id', requireAuth ,function(req, res){
+router.post('/post/:url', requireAuth ,function(req, res){
 
-	model.BlogPost.find({where:{url: req.params.id}}).success(function(post){
+	model.BlogPost.find({where:{url: req.params.url}}).success(function(post){
 		post.name = (req.body.name != null) ? req.body.name : post.name
 		post.url = (req.body.url != null) ? req.body.url : post.url
 		post.content = (req.body.content != null) ? req.body.content : post.content

@@ -38,8 +38,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 var testingData = function(req,res,next){
     model.Author.create({
-        given_name: "Peter",
-        family_name: "Kinnaird",
+        given_name: "Scotlug",
+        family_name: "User",
         gravatar: "",
         image_url: ""
     }).success(function(author){
